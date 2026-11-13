@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "Blackspy Meta Ads",
+  "version": "0.2.1",
+  "description": "Ajuda a minerar ofertas com maior facilidade a Biblioteca de Anúncios do Meta Ads",
+  "permissions": ["storage", "downloads", "scripting", "unlimitedStorage"],
+  "host_permissions": [
+    "https://www.facebook.com/ads/library/*",
+    "https://facebook.com/*",
+    "https://*.facebook.com/*",
+    "https://*.fbcdn.net/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "Blackspy Meta Ads",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.facebook.com/*",
+        "https://facebook.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

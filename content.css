@@ -1,0 +1,47 @@
+#ad-library-radar {
+  all: initial;
+  position: fixed;
+  z-index: 2147483647;
+  top: 84px;
+  right: 20px;
+  width: 286px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #f1f5f9;
+  font-size: 13px;
+  line-height: 1.35;
+}
+#ad-library-radar *, #ad-library-radar *::before, #ad-library-radar *::after { box-sizing: border-box; }
+#ad-library-radar .radar-card { overflow: hidden; border: 1px solid #263244; border-radius: 12px; background: #101827; box-shadow: 0 16px 38px rgba(0, 0, 0, .42); }
+#ad-library-radar .radar-head { display: flex; align-items: center; justify-content: space-between; padding: 12px 13px; background: linear-gradient(120deg, #111827, #1e293b); border-bottom: 1px solid #2c3a50; color: #f8fafc; cursor: move; user-select: none; }
+#ad-library-radar .radar-brand { font-weight: 750; letter-spacing: -.15px; }
+#ad-library-radar .radar-mark { color: #60a5fa; }
+#ad-library-radar .radar-toggle { border: 0; color: #fff; background: transparent; padding: 2px 5px; font-size: 18px; cursor: pointer; }
+#ad-library-radar .radar-body { padding: 13px; }
+#ad-library-radar.is-collapsed .radar-body { display: none; }
+#ad-library-radar .radar-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 12px; }
+#ad-library-radar .radar-metric { min-height: 70px; padding: 9px; border: 1px solid #263244; border-radius: 8px; background: #172235; }
+#ad-library-radar .radar-label { display: block; color: #94a3b8; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .4px; }
+#ad-library-radar .radar-value { display: block; margin-top: 4px; font-size: 20px; font-weight: 750; letter-spacing: -.5px; }
+#ad-library-radar .radar-sub { display: block; color: #94a3b8; font-size: 10px; margin-top: 2px; }
+#ad-library-radar .radar-sub b { color: #93c5fd; font-weight: 800; }
+#ad-library-radar .radar-row { display: flex; gap: 8px; align-items: center; margin-top: 8px; }
+#ad-library-radar button { appearance: none; flex: 1; border: 1px solid #3b82f6; border-radius: 7px; padding: 9px 8px; background: #2563eb; color: #fff; font: inherit; font-weight: 650; cursor: pointer; }
+#ad-library-radar button:hover { background: #1d4ed8; }
+#ad-library-radar button.secondary { border-color: #334155; color: #bfdbfe; background: #1e293b; }
+#ad-library-radar button.secondary:hover { background: #27364b; }
+#ad-library-radar button.stop { border-color: #7f1d1d; color: #fecaca; background: #3f161c; }
+#ad-library-radar .radar-setting { margin-top: 12px; }
+#ad-library-radar .radar-filters { display: grid; gap: 7px; padding: 9px; border: 1px solid #263244; border-radius: 8px; background: #172235; }
+#ad-library-radar .radar-filters label { display: grid; grid-template-columns: 1fr 82px; align-items: center; gap: 8px; color: #cbd5e1; font-size: 11px; }
+#ad-library-radar .radar-filters select, #ad-library-radar .radar-filters input { width: 100%; min-width: 0; border: 1px solid #3a4a62; border-radius: 5px; padding: 5px; color: #f1f5f9; background: #0f172a; font: inherit; }
+#ad-library-radar input[type="range"] { width: 100%; accent-color: #60a5fa; cursor: pointer; }
+#ad-library-radar .radar-note { min-height: 15px; margin: 10px 0 0; color: #94a3b8; font-size: 11px; }
+#ad-library-radar .radar-status { display: inline-block; width: 7px; height: 7px; margin-right: 5px; border-radius: 50%; background: #64748b; }
+#ad-library-radar .radar-status.running { background: #34d399; box-shadow: 0 0 0 3px rgba(52,211,153,.14); }
+.ad-library-radar-duration { display: inline-block !important; margin: 8px 0 2px !important; padding: 4px 7px !important; border-radius: 999px !important; color: #86efac !important; background: #123524 !important; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important; font-size: 11px !important; font-weight: 700 !important; line-height: 1.2 !important; }
+.ad-library-radar-download, .ad-library-radar-save { display: block !important; width: calc(100% - 16px) !important; margin: 10px 8px 4px !important; padding: 8px 10px !important; border: 1px solid #3b82f6 !important; border-radius: 7px !important; color: #fff !important; background: #2563eb !important; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important; font-size: 12px !important; font-weight: 700 !important; line-height: 1.2 !important; text-align: center !important; cursor: pointer !important; }
+.ad-library-radar-save { margin-top: 5px !important; border-color: #334155 !important; color: #bfdbfe !important; background: #1e293b !important; }
+.ad-library-radar-download:hover { background: #1d4ed8 !important; }
+.ad-library-radar-save:hover { background: #27364b !important; }
+.ad-library-radar-download:disabled, .ad-library-radar-save:disabled { border-color: #334155 !important; color: #94a3b8 !important; background: #1e293b !important; cursor: wait !important; }
+.ad-library-radar-filtered { display: none !important; }
